@@ -25,14 +25,17 @@ jobs: # a collection of steps
           command: 'sudo sh ./execute.sh'           
       - store_test_results:
           path: ./newman    
-      - type: test-results-store
-          path: './newman'
       - run:
           name: list test results
           command: 'sudo ls -l ./newman'   
       - run:
           name: list root directory
-          command: 'sudo ls -l '                                         
+          command: 'sudo ls -l '   
+      - type: test-results-store
+          path: /tmp/test-results 
+      - run:
+          name: copy tests
+          command: 'cp ./newman/* /tmp/test-results/'                                                            
 workflows:
   version: 2
   build-and-test:
