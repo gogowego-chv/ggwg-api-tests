@@ -26,7 +26,7 @@ jobs: # a collection of steps
       - store_test_results:
           path: ./newman    
       - type: test-results-store
-          path: ./newman
+          path: './newman'
       - run:
           name: list test results
           command: 'sudo ls -l ./newman'   
