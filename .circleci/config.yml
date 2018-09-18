@@ -19,7 +19,7 @@ jobs: # a collection of steps
           command: 'sudo pwd'          
       - run:
           name: postman
-          command: 'sudo sh ./execute'          
+          command: 'sudo sh ./execute.sh'          
 workflows:
   version: 2
   build-and-test:
