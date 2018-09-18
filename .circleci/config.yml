@@ -23,11 +23,11 @@ jobs: # a collection of steps
       - run:
           name: postman
           command: 'sudo sh ./execute.sh'           
+      - store_test_results:
+          path: /tmp/test-results    
       - run:
           name: list
-          command: 'sudo ls -l'  
-      - store_test_results:
-          path: /tmp/test-results                       
+          command: 'sudo ls -l /tmp/test-results'                               
 workflows:
   version: 2
   build-and-test:
