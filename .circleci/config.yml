@@ -16,8 +16,14 @@ jobs: # a collection of steps
         enabled: true    
     steps: # a collection of executable commands     
       - run:
+          name: list
+          command: 'sudo ls -l'
+      - run:
+          name: pwd
+          command: 'sudo pwd'          
+      - run:
           name: postman
-          command: sh ./execute
+          command: 'sudo sh ./execute'
 workflows:
   version: 2
   build-and-test:
