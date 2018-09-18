@@ -8,9 +8,12 @@ jobs: # a collection of steps
       - run:
           name: update-npm 
           command: 'sudo npm install -g npm@latest'
-      - run: # run tests
-          name: newman
-          command: 'sudo npm install -g newman'
+      - run: # install newman
+          name: install newman
+          command: 'sudo npm install -g newman'   
+      - run:
+          name: mkdir test results
+          command: 'mkdir /tmp/test-results'                 
       - run:
           name: list
           command: 'sudo ls -l'
@@ -19,10 +22,12 @@ jobs: # a collection of steps
           command: 'sudo pwd'          
       - run:
           name: postman
-          command: 'sudo sh ./execute.sh'   
+          command: 'sudo sh ./execute.sh'           
       - run:
           name: list
-          command: 'sudo ls -l'                 
+          command: 'sudo ls -l'  
+      - store_test_results:
+          path: /tmp/test-results                       
 workflows:
   version: 2
   build-and-test:
