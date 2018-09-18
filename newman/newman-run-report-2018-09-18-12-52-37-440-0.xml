@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="GOGOWEGO" time="0.259">
-  <testsuite name="test-lambda" id="08b59d98-d170-4d7c-b1b6-32a687ad78c6" tests="1" time="0.259">
-    <testcase name="Body matches string" time="0.259"/>
-  </testsuite>
-</testsuites>
