@@ -10,7 +10,10 @@ jobs: # a collection of steps
           command: 'sudo npm install -g npm@latest'
       - run: # install newman
           name: install newman
-          command: 'sudo npm install -g newman'   
+          command: 'sudo npm install -g newman'  
+      - run: # install junit-merge
+          name: install junit-merge
+          command: 'sudo npm install -g junit-merge'             
       - run:
           name: mkdir test results
           command: 'mkdir /tmp/test-results'                 
