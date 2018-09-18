@@ -20,6 +20,8 @@ jobs: # a collection of steps
           name: newman
           command: npm install -g newman
   tests:
+    machine:
+        enabled: true    
     steps: # a collection of executable commands     
       - run:
           name: postman
