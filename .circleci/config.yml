@@ -24,10 +24,10 @@ jobs: # a collection of steps
           name: postman
           command: 'sudo sh ./execute.sh'           
       - store_test_results:
-          path: ~/newman    
+          path: ./newman    
       - run:
           name: list test results
-          command: 'sudo ls -l ~/newman'   
+          command: 'sudo ls -l ./newman'   
       - run:
           name: list root directory
           command: 'sudo ls -l '                                         
