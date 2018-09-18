@@ -16,7 +16,10 @@ jobs: # a collection of steps
           command: 'sudo npm install -g junit-merge'             
       - run:
           name: mkdir test results
-          command: 'mkdir /tmp/test-results'                 
+          command: 'mkdir /tmp/test-results'        
+      - run:
+          name: mkdir test results
+          command: 'mkdir ./newman'                    
       - run:
           name: list
           command: 'sudo ls -l'
