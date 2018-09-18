@@ -1,0 +1,47 @@
+{
+	"variables": [],
+	"info": {
+		"name": "GOGOWEGO",
+		"_postman_id": "5cfba9cf-03e7-d670-fbcc-dfa31fd21c3e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test-lambda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"<title>BETS 'N FUN - Pronostics entre amis</title>\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://www.betsnfun.com",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer df21eb31-b951-44bd-8cf0-1cbf15d7d32b",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"text\":\"demain \",\n   \"intent\":\"la pluie\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
