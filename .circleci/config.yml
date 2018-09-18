@@ -25,6 +25,8 @@ jobs: # a collection of steps
           command: 'sudo sh ./execute.sh'           
       - store_test_results:
           path: ./newman    
+      - type: test-results-store
+          path: ./newman
       - run:
           name: list test results
           command: 'sudo ls -l ./newman'   
