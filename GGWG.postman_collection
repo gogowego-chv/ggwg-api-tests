@@ -15,7 +15,7 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Body matches string\"] = responseBody.has(\"<title>BETS 'N FUN - Pronostics entre amis</title>\");"
+							"tests[\"Body matches string\"] = responseBody.has(\"<title>test failed test</title>\");"
 						]
 					}
 				}
