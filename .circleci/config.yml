@@ -35,7 +35,7 @@ jobs: # a collection of steps
           path: ./newman  
       - run:
           name: list test results
-          command: 'sudo ls -l ./newman/results'   
+          command: 'sudo ls -l ./newman'   
       - run:
           name: list root directory
           command: 'sudo ls -l '                                                              
