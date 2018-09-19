@@ -28,7 +28,10 @@ jobs: # a collection of steps
           command: 'sudo pwd'          
       - run:
           name: postman
-          command: 'sudo sh ./execute.sh'           
+          command: 'sudo sh ./execute.sh'  
+      - run:
+          name: mv test results
+          command: 'sudo mv ./newman/*.xml ./newman/results/'                     
       - store_test_results:
           path: ./newman    
       - store_artifacts:
